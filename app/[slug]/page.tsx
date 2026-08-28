@@ -129,14 +129,15 @@ export default function BookingPage() {
   const coverImage = clinic.cover_image_url || fallbackImages[slug] || "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop";
 
   return (
-    <main className="relative min-h-screen bg-[#FDFCFB] sm:p-6 md:p-12 flex flex-col items-center justify-center font-sans text-stone-800 overflow-hidden z-0">
+    <main className="relative min-h-screen bg-[#FDFCFB] p-4 sm:p-6 md:p-12 flex flex-col items-center justify-center font-sans text-stone-800 overflow-hidden z-0">
       
       <div 
         className="absolute inset-0 z-[-1] opacity-[0.04] pointer-events-none mix-blend-multiply fixed"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2000&auto=format&fit=crop')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       ></div>
 
-      <div className="w-full max-w-6xl mb-6 flex justify-between items-center px-2 relative z-10">
+      {/* CABECERA CON RESPIRO SUPERIOR ADAPTATIVO (pt-12 en móvil para evitar el notch) */}
+      <div className="w-full max-w-6xl mb-6 mt-6 sm:mt-0 flex justify-between items-center px-2 relative z-10">
         <Link href="/" className="inline-flex items-center gap-2 bg-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#9B804E] shadow-sm border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:shadow-md transition-all">
           <ArrowLeft strokeWidth={1.5} className="w-4 h-4" /> Demos
         </Link>
