@@ -88,24 +88,24 @@ export default function DentalAdminDashboard() {
   return (
     <main className="min-h-screen bg-[#F8FAFC] font-sans text-stone-800 z-0 flex flex-col">
       
-      {/* CABECERA CORPORATIVA DENTAL (Tonos Azul Clínico / Sky) */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-sky-900/15 px-6 py-4 flex items-center justify-between shadow-sm">
-        <div className="flex items-center gap-6">
-          <Link href="/dental-demo" className="inline-flex items-center gap-2 bg-[#F8FAFC] px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-sky-800 shadow-sm border border-sky-200 hover:border-sky-700 transition-all">
-            <ArrowLeft strokeWidth={1.5} className="w-3.5 h-3.5" /> Portal Público
+      {/* CABECERA CORPORATIVA DENTAL (Respiro extra en móvil: pt-12) */}
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-sky-900/15 px-4 md:px-6 pt-12 pb-4 md:py-4 flex items-center justify-between shadow-sm">
+        <div className="flex items-center gap-4 md:gap-6">
+          <Link href="/dental-demo" className="inline-flex items-center gap-2 bg-[#F8FAFC] px-4 md:px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-sky-800 shadow-sm border border-sky-200 hover:border-sky-700 transition-all">
+            <ArrowLeft strokeWidth={1.5} className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Portal Público</span>
           </Link>
           <div className="hidden sm:flex items-center gap-2">
             <Stethoscope strokeWidth={1.5} className="w-4 h-4 text-sky-700" />
             <h1 className="font-serif font-medium text-lg text-stone-900 tracking-tight">Gestión de Quirófanos y Odontología — {clinic.business_name}</h1>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <button 
             onClick={() => setIsNotificationsOpen(true)}
             className="relative bg-[#F8FAFC] border border-sky-200 hover:border-sky-700 text-sky-800 px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-sm"
           >
             <Bell strokeWidth={1.5} className="w-4 h-4" />
-            <span>Avisos</span>
+            <span className="hidden sm:inline">Avisos</span>
             {avisos.length > 0 && (
               <span className="absolute -top-1 -right-1 bg-sky-700 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-md">
                 {avisos.length}
@@ -113,8 +113,8 @@ export default function DentalAdminDashboard() {
             )}
           </button>
 
-          <div className="bg-sky-900 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-white border border-sky-800 flex items-center gap-2 shadow-md">
-            <ShieldCheck strokeWidth={1.5} className="w-4 h-4 text-sky-300" /> PIN de Seguridad Activo
+          <div className="bg-sky-900 px-4 md:px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-white border border-sky-800 flex items-center gap-2 shadow-md">
+            <ShieldCheck strokeWidth={1.5} className="w-4 h-4 text-sky-300" /> <span className="hidden sm:inline">PIN de Seguridad Activo</span>
           </div>
         </div>
       </header>
@@ -132,7 +132,7 @@ export default function DentalAdminDashboard() {
                 <h2 className="text-2xl font-serif font-medium text-stone-900 tracking-tight">Agenda de Quirófanos y Boxes</h2>
                 <p className="text-stone-500 text-xs font-light mt-1">Control activo de pacientes y tratamientos odontológicos.</p>
               </div>
-              <span className="text-xs font-bold uppercase tracking-widest bg-sky-50 text-sky-800 border border-sky-200 px-4 py-2 rounded-full">
+              <span className="hidden sm:inline-block text-xs font-bold uppercase tracking-widest bg-sky-50 text-sky-800 border border-sky-200 px-4 py-2 rounded-full">
                 Vista Quirúrgica
               </span>
             </div>

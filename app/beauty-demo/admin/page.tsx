@@ -88,8 +88,8 @@ export default function BeautyAdminDashboard() {
   return (
     <main className="min-h-screen bg-[#FDFBF9] font-sans text-stone-800 flex flex-col md:flex-row z-0">
       
-      {/* PANEL LATERAL BOUTIQUE (Estilo Revista de Lujo) */}
-      <aside className="w-full md:w-80 bg-stone-900 text-stone-100 p-8 flex flex-col justify-between border-r border-rose-500/20 shrink-0">
+      {/* PANEL LATERAL BOUTIQUE (Estilo Revista de Lujo) - Con espaciado superior extra para móvil */}
+      <aside className="w-full md:w-80 bg-stone-900 text-stone-100 p-8 pt-16 md:pt-8 flex flex-col justify-between border-r border-rose-500/20 shrink-0">
         <div>
           <div className="flex items-center gap-2 mb-8">
             <Sparkles className="w-5 h-5 text-rose-400" />
@@ -116,13 +116,13 @@ export default function BeautyAdminDashboard() {
           </nav>
         </div>
 
-        <div className="pt-8 border-t border-stone-800 text-[10px] text-stone-500 flex items-center gap-2">
+        <div className="pt-8 mt-8 border-t border-stone-800 text-[10px] text-stone-500 flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-rose-400" /> Sincronización iPad Activa
         </div>
       </aside>
 
       {/* CONTENIDO PRINCIPAL ASIMÉTRICO */}
-      <div className="flex-1 p-6 md:p-12 overflow-y-auto space-y-8">
+      <div className="flex-1 p-6 pt-10 md:p-12 overflow-y-auto space-y-8">
         
         {/* CABECERA Y MÉTRICAS EN LÍNEA */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-stone-200">
@@ -130,12 +130,12 @@ export default function BeautyAdminDashboard() {
             <h2 className="text-3xl font-serif font-normal text-stone-900">Panel de Control Estético</h2>
             <p className="text-xs text-stone-500 font-light mt-1">Gestión fluida de citas y recordatorios automatizados.</p>
           </div>
-          <div className="flex gap-4">
-            <div className="bg-white px-6 py-4 rounded-2xl border border-stone-200 shadow-sm">
+          <div className="flex gap-4 w-full md:w-auto">
+            <div className="bg-white px-6 py-4 rounded-2xl border border-stone-200 shadow-sm flex-1 md:flex-none">
               <span className="text-[10px] uppercase tracking-widest text-stone-400 block">Facturación</span>
               <span className="text-2xl font-serif font-medium text-stone-900">{totalRevenue} €</span>
             </div>
-            <div className="bg-white px-6 py-4 rounded-2xl border border-stone-200 shadow-sm">
+            <div className="bg-white px-6 py-4 rounded-2xl border border-stone-200 shadow-sm flex-1 md:flex-none">
               <span className="text-[10px] uppercase tracking-widest text-stone-400 block">Citas Totales</span>
               <span className="text-2xl font-serif font-medium text-rose-600">{appointments.length}</span>
             </div>
